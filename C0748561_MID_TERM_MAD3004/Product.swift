@@ -26,7 +26,7 @@ class Product{
     func display() {
         print("Product ID: \(self.productId)")
         print("Product Name: \(self.productName)")
-        print("Product Price: \(self.price)")
+        print("Product Price: \(self.price.currency())")
         print("Product Quantity: \(self.quantity)\n")
     }
 }

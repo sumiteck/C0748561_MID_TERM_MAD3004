@@ -14,7 +14,7 @@ class Order{
     var orderDate = Date()
     var productArray = [Product]()
     var orderTotal: Float!
-    var order = Dictionary<Int, [Product]>()
+    var order = Dictionary<Int, String>()
     
 
     
@@ -28,9 +28,7 @@ class Order{
         self.orderTotal = total
         
     }
-    func sortFunc(num1: Int, num2: Int) -> Bool {
-        return num1 < num2
-    }
+   
 
     func display() {
         print("Order ID: \(orderId)")
@@ -40,5 +38,19 @@ class Order{
         }
         print("Order Total: \(orderTotal!)\n")
 }
-   
+    func getDict(orderId:Int, productList:[Product]){
+        var addList = String()
+        for k in 0..<productList.count{
+            addList += productList[k].productName+", "
+        }
+        self.order.updateValue(addList, forKey: orderId)
+    }
+    
+    func displayOrder() {
+        for (i,j) in order{
+            print("Dictionary Key: \(i), Value: \(j)")
+        }
+    }
+    
 }
+

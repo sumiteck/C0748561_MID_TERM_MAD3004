@@ -15,18 +15,23 @@ var product4 = Product(productId: 04, productName: "Lcd", price: 240.00, quantit
 var product5 = Product(productId: 05, productName: "Samsung S10", price: 1700.00, quantity: 1)
 
 
-
 var totalProducts = [product1,product2,product3,product4,product5]
 for s in totalProducts{
     s.display()
 }
 print("---------------")
 
-var order1 = Order(orderId: 111, productArray: [product1,product2,product3])
+var order1 = Order(orderId: 101, productArray: [product1,product2,product3,product5])
 order1.display()
-var order2 = Order(orderId: 222, productArray: [product3,product2,product5])
+var order2 = Order(orderId: 102, productArray: [product3,product2,product5,product3])
 order2.display()
-var order3 = Order(orderId: 333, productArray: [product5,product2,product3,product4])
+var order3 = Order(orderId: 1033, productArray: [product5,product2,product3,product4])
 order3.display()
 
 
+order1.getDict(orderId: order1.orderId, productList: order1.productArray)
+order1.displayOrder()
+order2.getDict(orderId: order2.orderId, productList: order2.productArray)
+order2.displayOrder()
+order3.getDict(orderId: order3.orderId, productList: order3.productArray)
+order3.displayOrder()

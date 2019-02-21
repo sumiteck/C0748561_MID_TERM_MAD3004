@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension Int{
+extension Float{
     func currency() ->String{
         return "$ \(self)"
     }
