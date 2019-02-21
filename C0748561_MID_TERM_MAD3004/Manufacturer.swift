@@ -16,4 +16,8 @@ class Manufacturer{
         self.manufacturerId = Int()
         self.manufacturerName = String()
     }
+    init(manufacturerId: Int,manufacturerName: String){
+    self.manufacturerId = manufacturerId
+        self.manufacturerName = manufacturerName
+}
 }

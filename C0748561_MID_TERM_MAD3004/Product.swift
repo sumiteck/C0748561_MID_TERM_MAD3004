@@ -21,6 +21,7 @@ class Product{
         self.productName = productName
         self.price = price
         self.quantity = quantity
+        
     }
     
     func display() {
