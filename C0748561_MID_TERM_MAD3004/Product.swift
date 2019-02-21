@@ -23,7 +23,7 @@ class Product{
         self.quantity = quantity
     }
     
-    func displayData() {
+    func display() {
         print("Product ID: \(self.productId)")
         print("Product Name: \(self.productName)")
         print("Product Price: \(self.price)")

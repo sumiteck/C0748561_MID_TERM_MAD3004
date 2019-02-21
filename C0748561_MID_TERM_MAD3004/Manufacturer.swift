@@ -11,4 +11,9 @@ import Foundation
 class Manufacturer{
     var manufacturerId: Int
     var manufacturerName: String
+    
+    init(){
+        self.manufacturerId = Int()
+        self.manufacturerName = String()
+    }
 }

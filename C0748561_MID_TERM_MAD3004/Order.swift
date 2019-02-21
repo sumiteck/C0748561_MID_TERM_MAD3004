@@ -8,16 +8,37 @@
 
 import Foundation
 
-class Order: Product{
-    var orderId: Int
-    var orderDate: Date
-    var productArray = [String]()
-    var orderTotal: Float
+class Order{
     
-    init(){
-        self.orderId = Int()
-        self.orderDate = Date()
-        self.orderTotal = Float()
-        super.init(productId: <#T##Int#>, productName: <#T##String#>, price: <#T##Float#>, quantity: <#T##Int#>)
+    var orderId: Int
+    var orderDate = Date()
+    var productArray = [Product]()
+    var orderTotal: Float!
+    var order = Dictionary<Int, [Product]>()
+    
+
+    
+    init(orderId:Int, productArray : [Product]) {
+        self.orderId = orderId
+        self.productArray = productArray
+        var total = Float()
+        for t in 0..<productArray.count{
+            total += productArray[t].price
+        }
+        self.orderTotal = total
+        
     }
+    func sortFunc(num1: Int, num2: Int) -> Bool {
+        return num1 < num2
+    }
+
+    func display() {
+        print("Order ID: \(orderId)")
+        print("Order Date: \(orderDate)")
+        for i in 0..<productArray.count{
+            print("Product: \(productArray[i].productName)")
+        }
+        print("Order Total: \(orderTotal!)\n")
+}
+   
 }

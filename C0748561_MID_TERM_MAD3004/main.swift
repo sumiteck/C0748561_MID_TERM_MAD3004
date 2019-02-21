@@ -18,6 +18,15 @@ var product5 = Product(productId: 05, productName: "Samsung S10", price: 1700.00
 
 var totalProducts = [product1,product2,product3,product4,product5]
 for s in totalProducts{
-    s.displayData()
+    s.display()
 }
+print("---------------")
+
+var order1 = Order(orderId: 111, productArray: [product1,product2,product3])
+order1.display()
+var order2 = Order(orderId: 222, productArray: [product3,product2,product5])
+order2.display()
+var order3 = Order(orderId: 333, productArray: [product5,product2,product3,product4])
+order3.display()
+
 
