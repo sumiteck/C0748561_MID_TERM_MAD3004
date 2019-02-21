@@ -8,9 +8,16 @@
 
 import Foundation
 
-class Order{
+class Order: Product{
     var orderId: Int
     var orderDate: Date
-    var productArray: [String]()
+    var productArray = [String]()
+    var orderTotal: Float
     
+    init(){
+        self.orderId = Int()
+        self.orderDate = Date()
+        self.orderTotal = Float()
+        super.init(productId: <#T##Int#>, productName: <#T##String#>, price: <#T##Float#>, quantity: <#T##Int#>)
+    }
 }
